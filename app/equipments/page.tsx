@@ -1,13 +1,13 @@
-import InstrumentCard from "@/components/InstrumentCard";
+import EquipmentCard from "@/components/InstrumentCard";
 import { instrumentsList } from "@/data/instrumentlist.ts";
 
-const InstrumentPage = () => {
+const EquipmentPage = () => {
   return (
     <div className="mt-10">
       <section className="space-y-5">
         {instrumentsList.map((instrument) => {
           return (
-            <InstrumentCard
+            <EquipmentCard
               key={instrument.id}
               image={instrument.image}
               heading={instrument.heading}
@@ -20,4 +20,4 @@ const InstrumentPage = () => {
   );
 };
 
-export default InstrumentPage;
+export default EquipmentPage;

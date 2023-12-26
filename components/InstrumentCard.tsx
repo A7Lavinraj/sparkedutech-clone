@@ -8,8 +8,8 @@ interface InstrumentCardProps {
 
 const InstrumentCard = ({ image, heading, content }: InstrumentCardProps) => {
   return (
-    <div className="grid grid-cols-4 bg-light200 p-5">
-      <div className="rounded-md overflow-hidden max-w-[10rem] col-span-1">
+    <div className="grid sm:grid-cols-4 gap-5 p-5 bg-light200">
+      <div className="rounded-md overflow-hidden w-[10rem] h-fit sm:col-span-1 row-span-1 bg-light100 mx-auto">
         <Image
           src={image}
           alt="spark logo"
@@ -18,7 +18,7 @@ const InstrumentCard = ({ image, heading, content }: InstrumentCardProps) => {
           height={200}
         />
       </div>
-      <section className="space-y-5 col-span-3">
+      <section className="sm:col-span-3 row-span-1 text-center text-light400 space-y-5">
         <h2 className="text-light400 font-bold">{heading}</h2>
         <p>{content}</p>
       </section>

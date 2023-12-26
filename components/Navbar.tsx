@@ -1,34 +1,55 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
+  const [status, setStatus] = useState(false);
+
+  function hamburgerHandler() {
+    setStatus(!status);
+  }
+
   return (
-    <nav className="my-5 flex items-center justify-between">
-      <div className="relative w-16 pb-16">
-        <Image
-          src="/spark-logo.png"
-          alt="spark logo"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <ul className="flex items-center gap-10 font-semibold">
-        <Link href="/">
-          <li>Home</li>
-        </Link>
-        <Link href="/instruments">
-          <li>Instruments</li>
-        </Link>
-        <Link href="#">
-          <li>Services</li>
-        </Link>
-        <Link href="/brochure.pdf" download="brochure.pdf">
-          <li className="bg-light400 p-2 text-white rounded">
-            Download Brochure
-          </li>
-        </Link>
-      </ul>
-    </nav>
+    <React.Fragment>
+      <HamburgerMenu stateToggle={hamburgerHandler} enable={status} />
+      <nav className="my-5 flex items-center justify-between">
+        <div className="relative w-16 pb-16">
+          <Image
+            src="/spark-logo.png"
+            alt="spark logo"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+        <button
+          onClick={hamburgerHandler}
+          className="text-light400 text-2xl sm:hidden"
+        >
+          <GiHamburgerMenu />
+        </button>
+        <ul className="sm:flex hidden items-center gap-10 font-semibold">
+          <Link href="/">
+            <li>Home</li>
+          </Link>
+          <Link href="/equipments">
+            <li>Equipments</li>
+          </Link>
+          <Link href="/services">
+            <li>Services</li>
+          </Link>
+          <Link href="/brochure.pdf" download="brochure.pdf">
+            <li className="bg-light400 p-2 text-white rounded">
+              Download Brochure
+            </li>
+          </Link>
+        </ul>
+      </nav>
+    </React.Fragment>
   );
 };
 
