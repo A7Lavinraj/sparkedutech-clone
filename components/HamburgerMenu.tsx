@@ -12,7 +12,7 @@ const HamburgerMenu = ({ enable, stateToggle }: HamburgerMenuProps) => {
     <div
       className={twMerge(
         "bg-light200 w-screen h-screen fixed top-0 left-0 z-10 flex items-center justify-center transform transition-all",
-        enable ? "" : "w-0 invisible",
+        enable ? "" : "h-0 invisible",
       )}
     >
       <button
@@ -32,9 +32,6 @@ const HamburgerMenu = ({ enable, stateToggle }: HamburgerMenuProps) => {
         </Link>
         <Link href="/equipments">
           <li onClick={stateToggle}>Equipments</li>
-        </Link>
-        <Link href="/services">
-          <li onClick={stateToggle}>Services</li>
         </Link>
         <Link href="/brochure.pdf" download="brochure.pdf">
           <li

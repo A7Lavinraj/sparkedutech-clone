@@ -39,9 +39,6 @@ const Navbar = () => {
           <Link href="/equipments">
             <li>Equipments</li>
           </Link>
-          <Link href="/services">
-            <li>Services</li>
-          </Link>
           <Link href="/brochure.pdf" download="brochure.pdf">
             <li className="bg-light400 p-2 text-white rounded">
               Download Brochure
