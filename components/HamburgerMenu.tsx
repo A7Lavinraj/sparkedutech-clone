@@ -33,12 +33,12 @@ const HamburgerMenu = ({ enable, stateToggle }: HamburgerMenuProps) => {
         <Link href="/equipments">
           <li onClick={stateToggle}>Equipments</li>
         </Link>
-        <Link href="/brochure.pdf" download="brochure.pdf">
+        <Link href="/brochures">
           <li
             onClick={stateToggle}
             className="bg-light400 p-2 text-white rounded"
           >
-            Download Brochure
+            Explore Brochure
           </li>
         </Link>
       </ul>

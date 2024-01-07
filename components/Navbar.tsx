@@ -18,14 +18,16 @@ const Navbar = () => {
     <React.Fragment>
       <HamburgerMenu stateToggle={hamburgerHandler} enable={status} />
       <nav className="my-5 flex items-center justify-between">
-        <div className="relative w-16 pb-16">
-          <Image
-            src="/spark-logo.png"
-            alt="spark logo"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
+        <Link href="/">
+          <div className="relative w-16 pb-16">
+            <Image
+              src="/spark-logo.png"
+              alt="spark logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </Link>
         <button
           onClick={hamburgerHandler}
           className="text-light400 text-2xl sm:hidden"
@@ -39,9 +41,9 @@ const Navbar = () => {
           <Link href="/equipments">
             <li>Equipments</li>
           </Link>
-          <Link href="/brochure.pdf" download="brochure.pdf">
+          <Link href="/brochures">
             <li className="bg-light400 p-2 text-white rounded">
-              Download Brochure
+              Explore Brochures
             </li>
           </Link>
         </ul>

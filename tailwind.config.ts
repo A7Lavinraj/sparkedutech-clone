@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        light100: "#F3EEEA",
-        light200: "#EBE3D5",
-        light300: "#B0A695",
-        light400: "#776B5D",
+        light100: "#FFFFFF",
+        light200: "#FDFAF6",
+        light300: "#E4EFE7",
+        light400: "#064420",
       },
     },
   },

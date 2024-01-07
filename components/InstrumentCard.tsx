@@ -8,7 +8,7 @@ interface InstrumentCardProps {
 
 const InstrumentCard = ({ image, heading, content }: InstrumentCardProps) => {
   return (
-    <div className="grid sm:grid-cols-4 gap-5 p-5 bg-light200">
+    <div className="grid sm:grid-cols-4 gap-5 p-5 bg-light300 rounded">
       <div className="rounded-md overflow-hidden w-[10rem] h-fit sm:col-span-1 row-span-1 bg-light100 mx-auto">
         <Image
           src={image}
